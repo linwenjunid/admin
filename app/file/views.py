@@ -25,5 +25,7 @@ class FileView(FileAdmin):
             os.mkdir(path)
         except OSError:
             pass
-        super(FileView, self).__init__(path,'/files/',name='文件')
+
+        #/static/files/静态资源路径要准确
+        super(FileView, self).__init__(path,'/static/files/',name='文件')
 
